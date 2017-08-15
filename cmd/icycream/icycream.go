@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
+
+	gini "github.com/lvndry/IcyCream/pkg/supply/supply.go"
 )
 
 var (
@@ -22,15 +24,17 @@ func main() {
 	log.Println("How many balls do you want : ")
 	fmt.Scanf("%d", &numofballs)
 	log.Printf("You want %d balls", numofballs)
+	gini.FillFlavors()
+	log.Println(flavors)
 }
 
 func getFlavors() {
-	flavors["bastani"] = 10
-	flavors["bacon"] = 10
-	flavors["chocolate"] = 10
-	flavors["coconut"] = 10
-	flavors["pistacho"] = 10
-	flavors["vanilla"] = 10
+	flavors["bastani"]
+	flavors["bacon"]
+	flavors["chocolate"]
+	flavors["coconut"]
+	flavors["pistacho"]
+	flavors["vanilla"]
 }
 
 func getExtras() {
