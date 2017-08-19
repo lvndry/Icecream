@@ -32,10 +32,14 @@ func HasExtra(e string) bool {
 	return false
 }
 
-func FillFlavors(f string) {
-	Flavors[f] += 10
+func FillFlavors(f map[string]int) {
+	for key := range f {
+		f[key] += 10
+	}
 }
 
-func FillExtras(e string) {
-	Extras[e] += 10
+func FillExtras(e map[string]bool) {
+	for key := range e {
+		e[key] = true
+	}
 }
